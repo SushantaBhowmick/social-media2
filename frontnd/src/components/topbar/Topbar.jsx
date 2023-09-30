@@ -4,13 +4,14 @@ import Search from '@mui/icons-material/Search'
 import Person from '@mui/icons-material/Person'
 import Chat from '@mui/icons-material/Chat'
 import Notifications from '@mui/icons-material/Notifications'
+import { Link } from 'react-router-dom'
 const Topbar = () => {
   return (
 
     <div className="topbarContainer">
 
       <div className="topbarLeft">
-        <span className="logo">RS</span>
+       <Link to={'/'} style={{textDecoration:"none"}}> <span className="logo">RS</span></Link>
       </div>
 
       <div className="topbarCenter">
@@ -40,7 +41,9 @@ const Topbar = () => {
             <span className="topbarIconBadge">3</span>
           </div>
         </div>
-        <img src="/assets/person/1.jpeg" alt="" className="topbarImg" />
+       <Link to={"/profile"}>
+       <img src="/assets/person/1.jpeg" alt="" className="topbarImg" />
+       </Link>
       </div>
     </div>
   )

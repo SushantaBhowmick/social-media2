@@ -9,6 +9,9 @@ import Event from '@mui/icons-material/Event'
 import School from '@mui/icons-material/School'
 import Chat from '@mui/icons-material/Chat'
 import Videos from '@mui/icons-material/VideoCall'
+import {Users} from '../../dummyData'
+import CloseFriends from '../closeFriends/CloseFriends'
+
 
 const Sidebar = () => {
   return (
@@ -63,30 +66,11 @@ const Sidebar = () => {
         <button className="sidebarButton">Show Moree</button>
         <hr className="sidebarHr" />
         <ul className="sidebarFriendList">
-          <li className="sidebarFriend">
-            <img src="/assets/person/2.jpeg" alt="" className="sidebarFriendImg" />
-            <span className="sidebarFriendImage">Sushanta Bhowmick</span>
-          </li>
-          <li className="sidebarFriend">
-            <img src="/assets/person/2.jpeg" alt="" className="sidebarFriendImg" />
-            <span className="sidebarFriendImage">Sushanta Bhowmick</span>
-          </li>
-          <li className="sidebarFriend">
-            <img src="/assets/person/2.jpeg" alt="" className="sidebarFriendImg" />
-            <span className="sidebarFriendImage">Sushanta Bhowmick</span>
-          </li>
-          <li className="sidebarFriend">
-            <img src="/assets/person/2.jpeg" alt="" className="sidebarFriendImg" />
-            <span className="sidebarFriendImage">Sushanta Bhowmick</span>
-          </li>
-          <li className="sidebarFriend">
-            <img src="/assets/person/2.jpeg" alt="" className="sidebarFriendImg" />
-            <span className="sidebarFriendImage">Sushanta Bhowmick</span>
-          </li>
-          <li className="sidebarFriend">
-            <img src="/assets/person/2.jpeg" alt="" className="sidebarFriendImg" />
-            <span className="sidebarFriendImage">Sushanta Bhowmick</span>
-          </li>
+         {
+          Users.map((u)=>(
+            <CloseFriends key={u.id} user={u} />
+          ))
+         }
         </ul>
       </div>
     </div>

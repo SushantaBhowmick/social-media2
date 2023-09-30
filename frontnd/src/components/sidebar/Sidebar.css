@@ -4,6 +4,8 @@
     overflow-y: auto;
     overflow-x: auto;
 margin-left: 10px;
+position: sticky;
+top: 50px;
 
 }
 ::-webkit-scrollbar{
