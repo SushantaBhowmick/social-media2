@@ -1,0 +1,15 @@
+.registerBox{
+    background-color: #fff;
+    border-radius: 10px;
+    display: flex;
+    flex-direction:column;
+    justify-content: space-between;
+    padding: 20px;
+}
+.loginInput{
+    margin: 10px;
+}
+.loginButton{
+    margin-bottom: 10px;
+
+}
